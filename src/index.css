@@ -1,13 +1,116 @@
+/* App.css */
+
+/* Base Styles */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2;
+  color: #222831;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #f96d00;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul li {
+  margin: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  border: 2px solid #f96d00; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Clip the content inside the border */
+  width: 200px; /* Fixed width for the card */
+  text-align: center; /* Center align text */
+  cursor: pointer; /* Change cursor on hover */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+  background-color: #ffffff; /* Background color */
+  margin: 10px; /* Spacing between cards */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.card-image {
+  width: 100%; /* Make image take full width */
+  height: 180px; /* Fixed height for the image */
+  object-fit: cover; /* Crop the image to fit the container */
+  border-bottom: 2px solid #f96d00; /* Bottom border */
+}
+
+.card-name {
+  font-size: 1.1rem; /* Slightly larger font */
+  font-weight: 600; /* Semi-bold font */
+  color: #222831; /* Text color */
+  margin: 10px 0; /* Space around text */
+}
+
+h2 {
+  font-size: 2rem;
+  color: #393e46;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #393e46;
+  margin: 5px 0;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .card {
+    width: 150px; /* Adjust width for smaller screens */
+  }
+
+  h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .card-container {
+    gap: 10px; /* Reduce gap between cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Full width for small screens */
+    max-width: 300px; /* Max width for larger phones */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Further adjust font size */
+  }
+
+  ul {
+    padding: 0;
+  }
 }
